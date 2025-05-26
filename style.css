@@ -1,35 +1,74 @@
-/* In :root, define container size and default grid size */
+/* Root variables */
 :root {
-  --container-size: 480px;
+  --container-size: 800px;
   --grid-size: 16;
 }
 
-/* Center container both horizontally and vertically */
+/* General page layout */
 body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
 }
 
-/* Flex container: fixed size, wraps into rows */
+/* Header at top */
+header {
+  padding: 3vh;
+}
+
+header .title {
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  padding-left: 10vh;
+  color: rgb(114, 3, 60);
+}
+
+/* Wrapper for navigation and main grid */
+.container {
+  display: flex;
+  justify-content: center; /* Center nav + main as a group */
+  align-items: center;
+  width: var(--container-size);
+  margin: 0 auto; /* Center wrapper in page */
+}
+
+nav {
+  margin-top: 50vh;
+}
+
+/* Main grid next to nav, part of the centered group */
 #main-container {
   display: flex;
   flex-wrap: wrap;
+  border: 10px solid rgb(228, 93, 69);
+  border-radius: 15px;
   width: var(--container-size);
   height: var(--container-size);
+  /* no margin auto here */
 }
 
-/* Blocks: flex-basis ensures exactly grid-size items per row */
+/* Blocks: exactly grid-size per row */
 .block-style {
   flex: 0 0 calc(100% / var(--grid-size));
   height: calc(100% / var(--grid-size));
   box-sizing: border-box;
   background-color: whitesmoke;
+}
+
+/* Footer at bottom */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  text-align: center;
+  height: 30px;
+  background-color: rgb(1, 24, 66);
+  color: rgb(200, 206, 211);
 }
 
 /*# sourceMappingURL=style.css.map */

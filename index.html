@@ -8,17 +8,22 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <header><div>Etch-a-Sketch</div>
-    <label for="grid-slider">Grid size:</label>
-    <input  id="grid-slider" type="range" min="1" max="100" value="16"/>
-<span id="grid-value">16</span>
+    <header>
+        <div class="title">Etch-a-Sketch</div>
     </header>
+    <div class="container">
+        <nav>
+            <label for="grid-slider">Grid size:</label>
+            <input  id="grid-slider" type="range" min="1" max="100" value="16"/>
+            <span id="grid-value">16</span>
+        </nav>
+        <main>
+            <div id="main-container"></div>
+        </main>
+    </div>
     
-    <main>
-    <div id="main-container"></div>
-    </main>
     <footer>
-        Copyright ©
-        </footer>
+        Copyright © Abdulloh
+    </footer>
 </body>
 </html>
